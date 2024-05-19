@@ -1,9 +1,6 @@
 
-
-
 function simpleFetch(url){
-    
-    fetch("https://randomuser.me/api/")
+    fetch(url)
     .then(response => {
     
     if (!response.ok) {
@@ -17,11 +14,32 @@ function simpleFetch(url){
     
     .then(data => {
     console.log('Data hämtad:', data);
-    let joketext = data["setup"];
-    document.getElementById("mytext").innerText=joketext;
+
+    let myfname = document.getElementById("fname");
+    myfname.innerText = data.results[0].name.first;
+
+
+    let mylname = document.getElementById("lname");
+    mylname.innerText = data.results[0].name.last;
+
+
+    let mygender = document.getElementById("gender");
+    mygender.innerText = data.results[0].gender;
+
+
+    let mynumber = document.getElementById("number");
+    mynumber.innerText = data.results[0].location.street.number;
+
+    
+    let myemail = document.getElementById("email");
+    myemail.innerText = data.results[0].email;
+
+    
+
     
     
     return data;
+
     })
     
     .catch(error => {
@@ -30,11 +48,14 @@ function simpleFetch(url){
     });
     }
     
-    function showData3(){
-        let joketext4 = document.getElementById("text3").value;          //id
-        let apiResponse = simpleFetch(joketext4);
-      
-     }   
+    function showData(){
+        let mydata = "https://randomuser.me/api/";
+        let apiResponse = simpleFetch(mydata);
+    }  
+    
+      showData();
+
+     
 
 
 
