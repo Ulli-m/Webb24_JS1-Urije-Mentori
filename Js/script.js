@@ -1,4 +1,5 @@
 
+// i created my elements in Java Script
 
 let body = document.getElementById("body");
 let header = document.createElement("header");
@@ -20,13 +21,16 @@ let div = document.createElement("div");
 let main = document.createElement("main");
 let h2 = document.createElement("h2");
 
+// I appended my elements
+
 body.appendChild(header);
 body.appendChild(main);
-header.appendChild(h2);
+header.appendChild(h1);
 
-main.appendChild(h1);
+main.appendChild(h2);
 main.appendChild(myimage);
-main.appendChild(div);   
+main.appendChild(div); 
+main.appendChild(button);  
 
 div.appendChild(label1);
 div.appendChild(myfname);
@@ -39,20 +43,21 @@ div.appendChild(myphone);
 div.appendChild(label5);
 div.appendChild(myemail);
 
-main.appendChild(button);
-
 body.appendChild(footer);
-    
+ 
+
+// I put  some of my attributes outside my fetch: 
 
 header.setAttribute("id","myheader");
+
+h1.innerText = " Creating simple fetch:";
     
-h1.innerText = "API Random users:";
+h2.innerText = "API Random users:";
 
 button.setAttribute("id","mybutton");
 button.setAttribute("type","button");
 button.setAttribute("onclick","showData();");
 button.innerText = "Click for random users:";
-
 
 footer.setAttribute("id","myfooter");
 
@@ -140,13 +145,6 @@ function simpleFetch(url){
     myemail.setAttribute("id","email");
     myemail.setAttribute("class","myPtag");
     myemail.innerText = data.results[0].email;
-    
-
-   
-    
-   
-   
- 
     
     
     return data;

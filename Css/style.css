@@ -19,7 +19,7 @@
     
     text-align: center;
     text-decoration: underline;
-    font-weight: normal;
+    font-weight:500;
     margin: 10px;
     color:  rgb(69, 41, 73);
 
@@ -43,6 +43,7 @@
     margin-left: auto;
     margin-right: auto;
     clear: both;
+    border-radius: 5px;
 
 }
 
@@ -61,7 +62,7 @@
 }
 
 #myfooter{
-    height: 180px;
+    height: 160px;
     background-color: rgb(152, 134, 159);
     display: block;
    
@@ -69,11 +70,20 @@
 
 #myheader{
     display: block;
-    height: 180px;
+    height: 160px;
     background-color: rgb(152, 134, 159);
 }
 
 h1{
+    margin-bottom: 10px;
+    padding-top: 40px;
+    font-weight:normal;
+    text-align: center;
+    text-decoration: underline;
+    color:  rgb(69, 41, 73);
+}
+
+h2{
     margin-bottom: 10px;
     margin-top: 20px;
     font-weight:normal;
@@ -97,6 +107,7 @@ margin-right: auto;
     display: inline;
     float: left;
     border:   2px solid rgb(69, 41, 73);
+    border-radius: 5px;
     width: 40%;
     
     
