@@ -46,7 +46,7 @@ div.appendChild(myemail);
 body.appendChild(footer);
  
 
-// I put  some of my attributes outside my fetch: 
+// I put some of my attributes outside my fetch: 
 
 header.setAttribute("id","myheader");
 
