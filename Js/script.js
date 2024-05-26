@@ -61,6 +61,7 @@ button.innerText = "Click for random users:";
 
 footer.setAttribute("id","myfooter");
 
+// My fetch function
 
 function simpleFetch(url){
     fetch(url)
